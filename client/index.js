@@ -94,8 +94,6 @@ function calculateRoute() {
   });
 }
 
-// todo? : рефактор функции getInfo и функции createNewCarBtn
-
 async function displayInfo(distance) {
   const root = document.querySelector('#root');
   try {
