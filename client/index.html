@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip counter</title>
+    <!-- connecting .css files -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpL1DbrxPVsA0uBsFOF8i2UJV-jTDIDB0&callback=initMap"
+      async
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="infoWrapper"></div>
+    </div>
+    <div id="map" style="height: 100vh"></div>
+
+    <div class="modal">
+      <div class="modal-body">
+        <button class="modal-close">X</button>
+        <div class="modal-content">
+          <h2 class="formTitle">Enter a new car and send it !</h2>
+          <form action="" class="newCarForm">
+            <label for="">
+              Mark :
+              <input
+                class="formInput"
+                name="mark"
+                required
+                placeholder="Car mark"
+                type="text"
+                autofocus
+              />
+            </label>
+            <label for="">
+              Model :
+              <input
+                class="formInput"
+                name="model"
+                required
+                placeholder="Car model"
+                pattern="[A-Z][a-z]{1,19}"
+                type="text"
+              />
+            </label>
+
+            <label for="">
+              Consumption :
+              <input
+                class="formInput"
+                name="consumption"
+                required
+                placeholder="Car consumption"
+                min="1"
+                max="50"
+                type="number"
+              />
+            </label>
+            <label for="">
+              Average Speed :
+              <input
+                class="formInput"
+                name="avg-speed"
+                required
+                placeholder="Car Speed"
+                min="30"
+                max="160"
+                type="number"
+              />
+            </label>
+            <button class="sendDataBtn" type="submit">Add a new Car</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
